@@ -2,7 +2,7 @@ export const sideLinks = [
   {
     label: "Home",
     route: "/",
-    icon: "icons/home.svg",
+    icon: "icons/Home.svg",
   },
   {
     label: "Upcoming",
@@ -21,7 +21,7 @@ export const sideLinks = [
   },
   {
     label: "Personal Room",
-    route: "/previous-room",
-    icon: "icons/previous-room.svg",
+    route: "/personal-room",
+    icon: "icons/previous.svg",
   },
 ];
