@@ -1,26 +1,22 @@
-"use client"
+"use client";
+import MeetingTypeList from "@/components/MeetingTypeList";
 import React from "react";
-// function getDate(){
-//   const date:Date=new Date();
-//   return date;
-// }
-// interface date{
-//   date:Date
-// }
 
 const Home = () => {
-  // const [date,setCurrentDate] = useState<Date>(getDate())
-  const now=new Date();
-  const time=now.toLocaleTimeString("en-US",{hour:'2-digit',minute:'2-digit'})
+  const now = new Date();
+  const time = now.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
   // const date=now.toLocaleDateString("en-US",{
   //   weekday:"long",
   //   year:"numeric",
   //   month:"long",
   //   day:"numeric",
   // });
-  const date=(new Intl.DateTimeFormat('en-US',{
-    dateStyle:'full'
-  })).format(now)
+  const date = new Intl.DateTimeFormat("en-US", {
+    dateStyle: "full",
+  }).format(now);
   return (
     <section
       className="flex size-full
@@ -32,9 +28,7 @@ const Home = () => {
             Upcoming Meeting ar: 12:30 PM
           </h2>
           <div className="flex flex-col gap-2">
-            <h1 className="text-4xl font-extrabold lg:text-7xl">
-              {time}
-              </h1>
+            <h1 className="text-4xl font-extrabold lg:text-7xl">{time}</h1>
             <p className="text-lg font-medium text-sky-1 lg:text-2xl">
               {/* saturday ,march23,2024 */}
               {date}
@@ -42,6 +36,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* meeting list type */}
+      <MeetingTypeList />
     </section>
   );
 };
