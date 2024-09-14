@@ -13,23 +13,25 @@ const SideBar = () => {
      w-fit flex-col justify-between bg-dark-1 p-6
       pt-28 text-white max-sm:hidden lg:w-[264px]"
     >
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-1 flex-col gap-6">
         {sideLinks.map((link) => {
           const isActive =
-            pathname === link.route || pathname.startsWith(link.route);
+            pathname === link.route || pathname.startsWith(`${link.route}/`);
+          // console.log(isActive);
+
           return (
+            
+            
             <Link
               href={link.route}
               key={link.label}
               className={cn(
-                "flex gap-4 items-center p-4 rounded-lg justify-start",
+                "flex gap-4 items-center p-4 rounded-lg w-full max-w-60",
                 { "bg-blue-1": isActive }
               )}
             >
-              <Image src={link.icon} alt={link.label} width={24} height={24} />
-              <p className="text-lg font-semibold max-lg:hidden">
-                {link.label}
-              </p>
+              <Image src={link.icon} alt={link.label} width={20} height={20} />
+              <p className=" font-semibold ">{link.label}</p>
             </Link>
           );
         })}
