@@ -17,11 +17,11 @@ const Meeting = ({ params }: { params: { id: string } }) => {
     <main className="h-screen w-full">
       <StreamCall call={call}>
         <StreamTheme>
-          {!isSetCompleted ? <MeetingSetup /> : <MeetingRoom />}
+          {!isSetCompleted ? <MeetingSetup setIsSetCompleted={setIsSetCompleted}/> : <MeetingRoom />}
         </StreamTheme>
       </StreamCall>
     </main>
   );
 };
 
-export default Meeting;
+export default Meeting; 
