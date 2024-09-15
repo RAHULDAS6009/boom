@@ -13,12 +13,14 @@ const MeetingTypeList = () => {
   const [meetingState, setMeetingState] = useState<
     "isScheduledMeeting" | "isJoiningMeeting" | "isInstantMeeting" | undefined
   >();
-  const [values, setValues] = useState({
+  //  setValues
+  const [values,] = useState({
     dateTime: new Date(),
     description: "",
     link: "",
   });
-  const [callDetails, setCallDetails] = useState<Call>();
+  //callDetail
+  const [, setCallDetails] = useState<Call>();
   const { user } = useUser();
   const client = useStreamVideoClient();
 
