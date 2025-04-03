@@ -1,4 +1,4 @@
-# Video Calling Website(strema io video  sdk)
+# Video Calling Website(strem io video  sdk)
 
 ## Overview
 Welcome to **BZoom**, a video calling platform where you can effortlessly start and join video conferences. The project is currently 60% complete, but the core functionality is fully operational.
